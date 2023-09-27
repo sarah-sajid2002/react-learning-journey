@@ -29,31 +29,33 @@ export default function TextChange() {
   };
   return (
     <>
-      <div className="mainDiv">
-        <h1>text changer</h1>
-        <div className="showWord">no of words: {countFunction()}</div>
-        <textarea
-          name="textBox"
-          id="textBox"
-          cols="60"
-          rows="10"
-          value={text}
-          onChange={onChange}
-        ></textarea>
-        <div className="buttonDiv">
-          <button onClick={UpFunction} className="upperCase">
-            upper case
-          </button>
-          <button onClick={lowerFunction} className="lowerCase">
-            lower case
-          </button>
+      <div className="parentDiv">
+        <div className="mainDiv">
+          <h1>text changer</h1>
+          <div className="showWord">no of words: {countFunction()}</div>
+          <textarea
+            name="textBox"
+            id="textBox"
+            cols="60"
+            rows="10"
+            value={text}
+            onChange={onChange}
+          ></textarea>
+          <div className="buttonDiv">
+            <button onClick={UpFunction} className="upperCase">
+              upper case
+            </button>
+            <button onClick={lowerFunction} className="lowerCase">
+              lower case
+            </button>
 
-          <button onClick={removeFunction} className="remove">
-            remove
-          </button>
-          <button onClick={copyToClipboardFunc} className="copyToClipboard">
-            copy to clipboard
-          </button>
+            <button onClick={removeFunction} className="remove">
+              remove
+            </button>
+            <button onClick={copyToClipboardFunc} className="copyToClipboard">
+              copy to clipboard
+            </button>
+          </div>
         </div>
       </div>
     </>
