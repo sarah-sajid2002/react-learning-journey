@@ -1,41 +1,64 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+.parentDiv {
+  width: 100vw;
   height: 100vh;
-}
-.mainBox {
-  width: 100%;
-  height: 200px;
-  background-color: rgb(182, 250, 250);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-radius: 20px;
-  border: 2px solid blue;
 }
+
+.mainBox {
+  width: 80%;
+  height: 50%;
+  background-color: rgb(159, 244, 179);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
 h1 {
   text-transform: uppercase;
   text-align: center;
 }
+
 .mainBox h1 {
-  padding: 20px;
+  padding: 0px;
   background-color: white;
-  width: 20%;
+  width: 30%;
   border-radius: 10px;
   border: 2px solid blue;
+  height: 60px;
 }
-.increment,
-.decrement,
-.reset {
-  width: 100px;
+
+.button {
+  width: 80vw;
+  display: flex;
+  justify-content: space-evenly; /* Distribute space evenly between buttons */
+  align-items: center;
   height: 40px;
+}
+
+.button button {
+  width: 25%;
+  height: 100%;
   background-color: black;
   color: white;
-  margin: 10px 40px;
-  text-transform: uppercase;
-  display: inline-block;
+  text-transform: capitalize;
   cursor: pointer;
+  border: none; /* Remove button borders if not needed */
+}
+
+/* media query */
+@media (max-width: 600px) {
+  .mainBox {
+    width: 100%;
+  }
+  .button {
+    width: 100vw;
+  }
+  button {
+    width: 30%;
+  }
 }
