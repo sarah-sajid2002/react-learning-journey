@@ -17,6 +17,8 @@ export default function CounterApp() {
   };
   return (
     <>
+      <h1>use state practical examples</h1>
+      <h1>project 1 use state hook</h1>
       <div className="parentDiv">
         <h1>counter app using react</h1>
         <div className="mainBox">

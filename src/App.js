@@ -9,7 +9,7 @@ function App() {
     <>
       {/* <Navbar title="counter app" /> */}
       {/* <ObjectsInJsx /> */}
-      {/* <CounterApp /> */}
+      <CounterApp />
       <TextChange />
     </>
   );

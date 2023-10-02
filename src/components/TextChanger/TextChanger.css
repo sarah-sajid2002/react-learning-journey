@@ -57,7 +57,11 @@ button {
   align-items: center;
   font-weight: bold;
 }
-
+.bold {
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+}
 @media (max-width: 700px) {
   .mainDiv {
     width: 90vw;
@@ -76,8 +80,5 @@ button {
     height: 40px;
     width: 80%;
     margin: 10px 0px;
-  }
-  #textBox {
-    height: 30vh;
   }
 }

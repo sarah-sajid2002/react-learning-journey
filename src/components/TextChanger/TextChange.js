@@ -4,7 +4,10 @@ import { keyboard } from "@testing-library/user-event/dist/keyboard";
 import clipboard from "clipboard-copy";
 import Swal from "sweetalert2";
 export default function TextChange() {
+  // use states
   const [text, setTExt] = useState("enter your text");
+  const [fontWeight, changeFontWeight] = useState("normal");
+  // functions
   const UpFunction = (e) => {
     const upText = text.toUpperCase();
     setTExt(upText);
@@ -24,11 +27,14 @@ export default function TextChange() {
     clipboard(text);
     Swal.fire("copied!!!");
   };
+  // on change
   const onChange = (e) => {
     setTExt(e.target.value);
   };
+
   return (
     <>
+      <h1>project 2 use state hook</h1>
       <div className="parentDiv">
         <div className="mainDiv">
           <h1>text changer</h1>
@@ -54,6 +60,9 @@ export default function TextChange() {
             </button>
             <button onClick={copyToClipboardFunc} className="copyToClipboard">
               copy to clipboard
+            </button>
+            <button onClick={() => changeFontWeight("bold")} className="bold">
+              B
             </button>
           </div>
         </div>
